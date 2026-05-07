@@ -6,7 +6,7 @@ import undetected_chromedriver as uc
 
 # Tentukan nama file
 nama_file_csv = 'data_siswa.csv' 
-url_form = "https://docs.google.com/forms/d/e/1FAIpQLSeQyUkUgPzcawRTPDtT9b_vwzt5XikcIOX9HvxJdaEz884KKA/viewform?usp=dialog"
+url_form = "link google form sia deung"
 
 # PENGATURAN BROWSER UNTUK LAPTOP (WINDOWS)
 driver = uc.Chrome(version_main=147)
