@@ -71,14 +71,9 @@ with open(nama_file_csv, mode='r', encoding='utf-8') as file:
                                     jawaban_terpilih = opsi
                                     break
                                     
-                        # LOGIKA 3: SKALA LIKERT / DEMOGRAFI LAINNYA
+#                        LOGIKA 3: ACAK SEMUA PILIHAN (LIKERT & DEMOGRAFI)
                         if jawaban_terpilih is None:
-                            jumlah_opsi = len(opsi_jawaban)
-                            if jumlah_opsi >= 4:
-                                jawaban_terpilih = random.choice(opsi_jawaban[-2:])
-                            else:
-                                jawaban_terpilih = random.choice(opsi_jawaban)
-                        
+                            jawaban_terpilih = random.choice(opsi_jawaban)
                         # Jika bot sudah menentukan pilihan, klik jawabannya
                         if jawaban_terpilih:
                             driver.execute_script("arguments[0].click();", jawaban_terpilih)
