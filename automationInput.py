@@ -66,8 +66,8 @@ with open(nama_file_csv, mode='r', encoding='utf-8') as file:
                         if jawaban_terpilih is None and ("laki" in gabungan_teks or "perempuan" in gabungan_teks or "pria" in gabungan_teks or "wanita" in gabungan_teks):
                             for opsi in opsi_jawaban:
                                 teks_opsi = str(opsi.get_attribute("data-value")).lower()
-                                # Jika teks opsi mengandung kata gender dari CSV
-                                if target_gender.lower() in teks_opsi:
+                                # Tambahkan pengecekan apakah target_gender tidak kosong
+                                if target_gender.strip() != "" and target_gender.lower() in teks_opsi:
                                     jawaban_terpilih = opsi
                                     break
                                     
